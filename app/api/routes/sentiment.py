@@ -12,11 +12,11 @@ def analyze_sentiment(
         sentiment_service=Annotated[SentimentService, Depends(get_sentiment_service)],
         include_debug: bool = False,
     ) -> SentimentResponse:
-    
+
     result = sentiment_service.predict(request.text)
 
     if not include_debug:
-        result["debug_info"] = None
+        result["debug"] = None
 
     return SentimentResponse(
         label=result["label"],
