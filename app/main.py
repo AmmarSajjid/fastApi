@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.api.routes import health, sentiment
+from app.api.routes import health, sentiment, models
 
 
 app = FastAPI(
@@ -11,5 +11,6 @@ app = FastAPI(
 
 app.include_router(health.router)
 app.include_router(sentiment.router)
+app.include_router(models.router)
 
 
