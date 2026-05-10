@@ -1,6 +1,6 @@
 class SentimentService:
 
-    def apredict(self, text: str) -> dict:
+    def predict(self, text: str) -> dict:
         lowered = text.lower()
 
         positive_words = ['good', 'great', 'excellent', 'amazing', 'happy']
