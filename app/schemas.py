@@ -8,7 +8,7 @@ class SentimentRequest(BaseModel):
         description="Input text to analyze sentiment.",
     )
 
-class DebugInfoSentimentResponse(BaseModel):
+class DebugSentimentResponse(BaseModel):
     positive_word_hits: int
     negative_word_hits: int
 
@@ -17,4 +17,4 @@ class SentimentResponse(BaseModel):
     label: str
     score: float
     input_length: int
-    debug_info: DebugInfoSentimentResponse | None = None # last None is default value
+    debug: DebugSentimentResponse | None = None # last None is default value

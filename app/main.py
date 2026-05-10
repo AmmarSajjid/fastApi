@@ -3,7 +3,7 @@ from app.schemas import SentimentRequest, SentimentResponse
 from app.services import SentimentService
 
 app = FastAPI(
-    text="FastApi service",
+    title="FastApi service",
     version = "0.1.0",
     description="A small FastAPI service for sentiment analysis",
 )
