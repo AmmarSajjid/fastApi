@@ -9,7 +9,7 @@ router = APIRouter(tags=["sentiment"])
 @router.post("/v1/analyze/sentiment", response_model=SentimentResponse, response_model_exclude_none=True)
 def analyze_sentiment(
         request: SentimentRequest,
-        sentiment_service=Annotated[SentimentService, Depends(get_sentiment_service)],
+        sentiment_service: Annotated[SentimentService, Depends(get_sentiment_service)],
         include_debug: bool = False,
     ) -> SentimentResponse:
 
