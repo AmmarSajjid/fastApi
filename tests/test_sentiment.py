@@ -12,7 +12,7 @@ def test_positive_sentiment():
 
     assert data["label"] == "positive"
     assert data["score"] == 0.8
-    assert data["input_length"] == len("I love this product!")
+    assert data["input_length"] == len("This is an excellent amazing product!")
 
 
 def test_sentiment_empty_text_rejected():
