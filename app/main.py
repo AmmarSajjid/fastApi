@@ -17,6 +17,10 @@ def health_check() -> dict:
 
 
 @app.post("/v1/analyze/sentiment", response_model=SentimentResponse)
-def analyze_sentiment(request: SentimentRequest) -> SentimentResponse:
+def analyze_sentiment(request: SentimentRequest, include_debug: bool = False) -> SentimentResponse:
     result = sentiment_service.predict(request.text)
+
+    if not include_debug:
+        result["debug_info"] = None
+
     return SentimentResponse(**result)

@@ -22,5 +22,9 @@ class SentimentService:
         return {
             "label": label,
             "score": score,
-            "input_length": len(text)
+            "input_length": len(text),
+            "debug_info": {
+                "positive_word_hits": positive_count,
+                "negative_word_hits": negative_count
+            }
         }
