@@ -4,7 +4,7 @@ from app.main import app
 client = TestClient(app)
 
 def test_positive_sentiment():
-    response = client.post("/v1/analyze/sentiment", json={"text": "I love this product!"})
+    response = client.post("/v1/analyze/sentiment", json={"text": "This is an excellent amazing product!"})
 
     assert response.status_code == 200
     
