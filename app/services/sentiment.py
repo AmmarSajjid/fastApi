@@ -23,7 +23,7 @@ class SentimentService:
             "label": label,
             "score": score,
             "input_length": len(text),
-            "debug_info": {
+            "debug": {
                 "positive_word_hits": positive_count,
                 "negative_word_hits": negative_count
             }
